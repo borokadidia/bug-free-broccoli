@@ -4,13 +4,28 @@ import matplotlib.pyplot as plt  # type:ignore
 
 class Poly2:
     """ Classe permettant de representer un polynôme de degré 2."""
-
-    def __init__(self, *coeffs):
+    def __init__(self,a,b,c):
+        self.a=a
+        self.b=b
+        self.c=c
+     def delta(self) : 
+          return b**2-4*a**c
+          if delta <0:
+                return None, None
+          elif delta ==0:
+                return -b/(2*a), None
+          else :
+            x1 = (-b-sqrt(delta))/(2*a) 
+            x2 = (-b+sqrt(delta))/(2*a)
+            return x1,x2
+    def __init__(self, coeffs):
         """ Méthode constructeur qui prend en paramètre, les coefficients du polynôme"""
+        self.coeffs=coeffs
         pass
 
     def __add__(self, other):
         """Addition 2 polynômes et qui renvoi du nouveau polynôme"""
+        
         pass
 
     def __sub__(self, other):
